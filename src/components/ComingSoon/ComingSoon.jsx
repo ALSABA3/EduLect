@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./ComingSoon.css";
-import { Form, Button } from "react-bootstrap";
-import Newsletter from "../Newsletter/Newsletter";
 
 const ComingSoon = ({ targetDate }) => {
   const calculateTimeRemaining = () => {
@@ -20,13 +18,6 @@ const ComingSoon = ({ targetDate }) => {
 
     return () => clearInterval(interval);
   }, []);
-
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // handle form submission here
-  };
 
   const formatTime = (time) => {
     const seconds = Math.floor((time / 1000) % 60);
@@ -91,8 +82,6 @@ const ComingSoon = ({ targetDate }) => {
           Our website is under construction. We`ll be here soon with our new
           awesome site, subscribe to be notified.
         </p>
-
-        <Newsletter />
       </div>
     </section>
   );
