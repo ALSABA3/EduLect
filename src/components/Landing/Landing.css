@@ -1,0 +1,22 @@
+#landing {
+  height: 106vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  background-image: url(/23485382_42.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-title,
+.about-content {
+  color: white;
+}
+.about-title {
+  font-family: "Delcom";
+  font-size: 2rem;
+}

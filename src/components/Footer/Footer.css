@@ -1,0 +1,19 @@
+p {
+  margin: 0;
+}
+
+.nav-item img:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  transform: scale(1.1);
+}
+
+.footer {
+  background: #fff;
+  height: 127px;
+  width: 100vw;
+  position: absolute;
+  top: 200vh;
+  margin-top: auto;
+  z-index: 2;
+}

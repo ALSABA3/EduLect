@@ -1,0 +1,10 @@
+.dropdown-toggle::after {
+  content: none;
+}
+svg {
+  fill: white;
+}
+.nav-brand {
+  font-family: "Delcom";
+  font-size: 1.5rem;
+}
