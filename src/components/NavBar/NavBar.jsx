@@ -11,10 +11,10 @@ const NavBar = () => {
         <div className="flex-grow-1">
           <a class="navbar-brand" href="#">
             <img
-              className="me-2"
-              src="/black-bg-logo.png"
+              className="nav-logo me-2"
+              src="/black-logo.png"
               alt="Logo"
-              width="48"
+              width="42"
               height="38"
             />
             <p

@@ -38,3 +38,11 @@ svg {
 .navbar {
   background-color: rgba(0, 0, 0, 0.8);
 }
+.navbar-brand:hover .nav-logo {
+  transition-duration: 300ms;
+  filter: opacity(75%);
+}
+.navbar-brand:hover p {
+  transition-duration: 300ms;
+  color: rgba(255, 255, 255, 0.75);
+}

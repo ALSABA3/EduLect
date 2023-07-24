@@ -15,8 +15,19 @@
 .about-title,
 .about-content {
   color: white;
+  text-align: center;
 }
 .about-title {
-  font-family: "Delcom";
-  font-size: 2rem;
+  font-family: "seguibl";
+  font-size: 3rem;
+}
+.about-content {
+  font-family: "seguibl";
+}
+.my-border {
+  border: 1rem solid rgba(34, 42, 53, 0.8);
+  border-radius: 5rem;
+}
+.laning-img {
+  width: 50%;
 }
