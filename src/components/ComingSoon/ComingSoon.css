@@ -8,7 +8,7 @@
   z-index: 1;
   background-color: #007bff;
 }
-
+/* 007bff */
 .coming-soon-title {
   text-align: center;
   margin: 25px;
@@ -40,7 +40,7 @@
   background: linear-gradient(
     to bottom,
     rgb(53, 53, 53) 50%,
-    rgb(110, 110, 110) 50%
+    rgb(95, 97, 149) 50%
   );
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -62,9 +62,9 @@
   font-size: 14px;
 }
 
-.countdown-item:hover {
+/* .countdown-item:hover {
   transform: scale(1.1);
-}
+} */
 
 .coming-soon-text {
   text-align: center;

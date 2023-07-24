@@ -2,3 +2,7 @@
   font-family: "Delcom";
   src: url("./fonts/Delcom.ttf") format("ttf");
 }
+@font-face {
+  font-family: "seguibl";
+  src: url("./fonts/seguibl.ttf") format("ttf");
+}

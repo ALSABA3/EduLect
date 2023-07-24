@@ -14,6 +14,7 @@ const Footer = () => {
                   alt="Facebook"
                   width="30"
                   height="30"
+                  className="foot-img"
                 />
               </a>
             </li>
@@ -24,12 +25,19 @@ const Footer = () => {
                   alt="Twitter"
                   width="30"
                   height="30"
+                  className="foot-img"
                 />
               </a>
             </li>
             <li class="nav-item m-1">
               <a href="#">
-                <img src="/twitter.png" alt="Twitter" width="30" height="30" />
+                <img
+                  src="/twitter.png"
+                  alt="Twitter"
+                  width="30"
+                  height="30"
+                  className="foot-img"
+                />
               </a>
             </li>
           </ul>

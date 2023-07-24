@@ -1,10 +1,40 @@
 .dropdown-toggle::after {
   content: none;
 }
+.nav-link:hover svg {
+  fill: rgba(255, 255, 255, 0.75);
+}
 svg {
   fill: white;
+}
+.cart-icon {
+  margin: 0 9px;
+  filter: invert(100%);
+}
+.cart:hover .cart-icon {
+  transition-duration: 300ms;
+  filter: invert(100%) opacity(75%);
 }
 .nav-brand {
   font-family: "Delcom";
   font-size: 1.5rem;
+}
+.nav-link {
+  color: rgb(255, 255, 255);
+}
+.enter:hover {
+  transition-duration: 300ms;
+  background-color: #ffffff;
+}
+.enter img {
+  filter: invert(100%);
+}
+.enter:hover img {
+  transition-duration: 300ms;
+  filter: invert(
+    0%
+  ); /* Inverts the image back to its original colors when hovering */
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
 }

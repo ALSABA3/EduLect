@@ -3,11 +3,14 @@ import "./Landing.css";
 
 const Landing = () => {
   return (
-    <section className="border-bottom" id="landing">
+    <section className="" id="landing">
       <div class="container h-100 d-flex flex-column align-items-center justify-content-center px-4 pt-5  text-center">
-        <h1 class="about-title display-4 fw-bold ">About Us</h1>
+        <h1 class="about-title fw-bold mb-4 ">About Us</h1>
         <div class="mx-auto">
-          <p class="about-content lead mb-4">
+          <p
+            class="about-content lead mb-4 fs-4"
+            style={{ fontFamily: "seguibl" }}
+          >
             lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
             posuere erat a ante.lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Integer posuere erat a ante.lorem ipsum dolor sit
