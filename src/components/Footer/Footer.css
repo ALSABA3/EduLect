@@ -10,10 +10,4 @@ p {
 
 .footer {
   background: #fff;
-  height: 127px;
-  width: 100vw;
-  position: absolute;
-  top: 200vh;
-  margin-top: auto;
-  z-index: 2;
 }
