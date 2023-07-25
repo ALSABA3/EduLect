@@ -1,32 +1,30 @@
-#landing {
+#Smart {
   height: 100vh;
-  /* background-color: #0f1217; */
-  background-image: url(/z.jpg);
+  background-color: #291669;
+  /* background-image: url(/zzzz.jpg);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
-.about-title,
-.about-content {
+.smart-title,
+.smart-content {
   color: white;
   text-align: center;
 }
-.about-title {
+.smart-title {
   font-family: "LibreFranklin-ExtraLightItalic";
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
-.about-content {
+.smart-content {
   font-family: "LibreFranklin-ExtraLightItalic";
-  font-size: 1.75rem;
 }
 .my-border {
   /* border: 1rem solid rgba(0, 0, 0, 0.5); */
   border-radius: 5rem;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 10rem;
 }
-.laning-img {
+.smart-img {
   width: 50%;
 }

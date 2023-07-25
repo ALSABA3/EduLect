@@ -1,6 +1,11 @@
 #coming-soon {
   height: 100vh;
-  background-color: #007bff;
+  background-color: #291669;
+  /* background-image: url(/zs.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
 }
 /* 007bff */
 .coming-soon-title {
@@ -8,6 +13,7 @@
   margin: 25px;
   font-family: "Delcom";
   font-size: 2rem;
+  color: #fff;
 }
 .countdown-container {
   display: flex;
@@ -19,7 +25,7 @@
   text-align: center;
   margin: 0 10px;
   transition: transform 0.2s ease-in-out;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .countdown-box {
@@ -30,12 +36,9 @@
   align-items: center;
   font-size: 24px;
   color: #fff;
+  border: 0.25rem solid rgba(255, 255, 255, 1);
   border-radius: 8px;
-  background: linear-gradient(
-    to bottom,
-    rgb(53, 53, 53) 50%,
-    rgb(95, 97, 149) 50%
-  );
+  background: linear-gradient(to bottom, rgb(33, 16, 88), rgb(21, 13, 45));
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -56,19 +59,8 @@
   font-size: 14px;
 }
 
-/* .countdown-item:hover {
-  transform: scale(1.1);
-} */
-
 .coming-soon-text {
   text-align: center;
   margin: 25px;
-}
-
-.newsletter-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 25px;
-  width: 500;
+  color: #fff;
 }

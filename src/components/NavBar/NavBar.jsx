@@ -10,16 +10,16 @@ const NavBar = () => {
       <div class="container">
         <div className="flex-grow-1">
           <a class="navbar-brand" href="#">
-            <img
+            {/* <img
               className="nav-logo me-2"
               src="/black-logo.png"
               alt="Logo"
               width="42"
               height="38"
-            />
+            /> */}
             <p
               className="d-inline"
-              style={{ fontFamily: "Delcom", fontSize: "0.8rem" }}
+              style={{ fontFamily: "ATOMED", fontSize: "2rem" }}
             >
               EDULECT
             </p>
@@ -40,7 +40,7 @@ const NavBar = () => {
         <div class="collapse navbar-collapse" id="navbarsExample07">
           <ul class="navbar-nav me-auto flex-grow-1 align-items-center justify-content-end">
             <li class="nav-item m-1">
-              <a class="nav-link" aria-current="page" href="#">
+              <a class="nav-link fs-5" aria-current="page" href="#">
                 Courses
               </a>
             </li>
@@ -49,8 +49,8 @@ const NavBar = () => {
                 <img
                   src="/cart.png"
                   alt="enter"
-                  width="24"
-                  height="24"
+                  width="26"
+                  height="26"
                   className="cart-icon"
                 />
               </a>

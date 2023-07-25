@@ -3,7 +3,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer class="footer py-3 border-top">
+    <footer class="footer py-3 ">
       <div className="container d-flex flex-column flex-wrap justify-content-around align-items-center">
         <div className="m-3">
           <ul class="nav align-items-center justify-content-end">
@@ -43,7 +43,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <p class="text-body-primary">
+          <p class="text-body-primary" style={{ color: "white" }}>
             © 2023 EduLect ,Inc. All rights reserved
           </p>
         </div>

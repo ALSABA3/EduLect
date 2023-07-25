@@ -38,12 +38,12 @@ const ComingSoon = ({ targetDate }) => {
   return (
     <section id="coming-soon">
       <div className="container h-100 d-flex flex-column align-items-center justify-content-center">
-        <h1
+        <h2
           className="coming-soon-title fw-bold"
           style={{ fontFamily: "Delcom" }}
         >
           Coming Soon
-        </h1>
+        </h2>
         <div className="countdown-container">
           <div className="countdown-item">
             <div className="countdown-box">
@@ -78,9 +78,9 @@ const ComingSoon = ({ targetDate }) => {
             </div>
           </div>
         </div>
-        <p className="coming-soon-text">
+        <p className="coming-soon-text fs-4">
           Our website is under construction. We`ll be here soon with our new
-          awesome site, subscribe to be notified.
+          awesome site.
         </p>
       </div>
     </section>

@@ -1,0 +1,39 @@
+#team {
+  height: 100vh;
+  background-image: url(/zzzz.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.swappable-product-cards {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Style the product card */
+.product-card {
+  padding: 4rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  background-color: #291669;
+}
+
+/* Style the product card image */
+.product-card img {
+  width: 100%;
+  border-radius: 50%;
+  max-height: 200px;
+  /* object-fit: cover; */
+}
+
+/* Style the product card title and description */
+.product-card h3 {
+  color: white;
+  margin-top: 10px;
+}
+
+.product-card p {
+  color: #ffffff80;
+}
