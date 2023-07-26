@@ -17,7 +17,7 @@ const Landing = () => {
             </div>
             <div class="col-lg-6">
               <h1 class="about-title display-5 fw-bold lh-1 m-4">
-                BE UNIQE WITH US
+                BE UNIQUE WITH US
               </h1>
               <p class="about-content lead">
                 EduLect is the first platform in Turkiye to explain
