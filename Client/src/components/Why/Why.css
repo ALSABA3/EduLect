@@ -1,0 +1,27 @@
+#why {
+  height: 100vh;
+  /* background-color: #291669; */
+  background-image: url(/why.png);
+  /* background-attachment: fixed; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.why-title,
+.why-content {
+  color: white;
+}
+.why-title {
+  font-family: "LibreFranklin-ExtraLightItalic";
+  font-size: 3.117vw;
+}
+.why-content {
+  font-family: "LibreFranklin-ExtraLightItalic";
+}
+.why-img {
+  width: 70%;
+}
+li::marker {
+  color: #ffffff;
+}
