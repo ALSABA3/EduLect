@@ -1,3 +1,32 @@
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.breathing-div {
+  animation: breathe 2s ease-in-out 1;
+}
+
+@keyframes slideToRight {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.slideRight {
+  animation: slideToRight 1s ease-in-out;
+}
+
 #landing {
   height: 100vh;
   background-image: url(/landing.png);
@@ -22,28 +51,8 @@
   font-size: 4.5vw;
 }
 
-.laning-img {
+.landing-img {
   width: 25vw;
-}
-
-.my-border {
-  padding: 8vw;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 10vw;
-}
-
-.breathing-div {
-  animation: breathe 4s infinite ease-in-out;
-}
-
-@keyframes breathe {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
 }
 
 /* Tablets and Larger Devices */
@@ -56,13 +65,8 @@
     font-size: 2.25vw;
   }
 
-  .laning-img {
-    width: 25vw;
-  }
-
-  .my-border {
-    padding: 3vw;
-    border-radius: 2vw;
+  .landing-img {
+    width: 20vw;
   }
 }
 
@@ -76,12 +80,7 @@
     font-size: 1.4vw;
   }
 
-  .laning-img {
+  .landing-img {
     width: 20vw;
-  }
-
-  .my-border {
-    padding: 1.5vw;
-    border-radius: 1vw;
   }
 }

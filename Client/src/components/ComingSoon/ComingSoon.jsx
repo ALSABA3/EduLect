@@ -40,7 +40,7 @@ const ComingSoon = ({ targetDate }) => {
       <div className="container-fluid h-100 d-flex flex-row align-items-center justify-content-center">
         <div className="d flex flex-column align-items-center justify-content-center">
           <h2
-            className="coming-soon-title fw-bold"
+            className="coming-soon-title fw-bold my-2"
             style={{ fontFamily: "Delcom" }}
           >
             Coming Soon . . .

@@ -1,8 +1,6 @@
 #why {
   height: 100vh;
-
   background-image: url(/why.png);
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,10 +16,10 @@
 }
 .why-content {
   font-family: "LibreFranklin-ExtraLightItalic";
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 }
 .why-img {
-  width: 100%;
+  width: 20vw;
 }
 li::marker {
   color: #ffffff;
@@ -43,6 +41,6 @@ li::marker {
   }
 
   .why-img {
-    width: 80%;
+    width: 90%;
   }
 }

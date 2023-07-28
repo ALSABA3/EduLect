@@ -9,12 +9,12 @@ const Landing = () => {
           <div class=" d-flex justify-content-center px-5">
             <img
               src="/black-bg-logo.png"
-              class="laning-img d-block mx-lg-auto img-fluid breathing-div"
+              class="landing-img d-block mx-lg-auto img-fluid breathing-div"
               alt="Bootstrap Themes"
               loading="lazy"
             />
           </div>
-          <div class="px-5">
+          <div class="slideRight px-5">
             <h1 class="about-title display-5 fw-bold lh-1 m-4">
               BE UNIQUE WITH US
             </h1>

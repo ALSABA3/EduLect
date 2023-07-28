@@ -8,7 +8,6 @@
 
 .coming-soon-title {
   text-align: center;
-  margin: 25px;
   font-family: "Delcom";
   font-size: 2rem;
   color: #cb6ce6;
@@ -22,7 +21,6 @@
 
 .countdown-item {
   text-align: center;
-  margin: 0 10px;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -64,10 +62,6 @@
 
 /* Mobile Devices */
 @media (max-width: 767px) {
-  .coming-soon-title {
-    /* font-size: 8vw; */
-  }
-
   .coming-soon-text {
     font-size: 4.5vw;
     margin: 15px;
