@@ -6,8 +6,8 @@ import "popper.js";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "animate.css";
 
+import "./Fonts.css";
 import "./index.css";
-import "./fonts.css";
 
 import App from "./App";
 
