@@ -3,8 +3,7 @@
 }
 
 .navbar-brand {
-  font-family: "Delcom";
-  font-size: 1.667vw;
+  font-size: 2.5rem;
 }
 
 .nav-link {
@@ -20,7 +19,7 @@ svg {
 }
 
 .cart-icon {
-  margin: 0 0.521vw;
+  margin: 0.5rem;
   filter: invert(100%);
 }
 
@@ -50,22 +49,18 @@ svg {
 /* Mobile Devices */
 @media (max-width: 767px) {
   .navbar-brand {
-    font-size: 4vw;
+    font-size: 1.25rem;
   }
 
   .nav-link {
-    font-size: 3.5vw;
+    font-size: 2rem;
   }
 }
 
 /* Tablets and Larger Devices */
 @media (min-width: 768px) {
-  /* .navbar-brand {
-    font-size: 1.667vw;
-  } */
-
-  .nav-link {
-    font-size: 1.458vw;
+  .navbar-brand {
+    font-size: 1.75rem;
   }
 }
 
@@ -73,9 +68,5 @@ svg {
 @media (min-width: 1200px) {
   .navbar-brand {
     font-size: 1.25vw;
-  }
-
-  .nav-link {
-    font-size: 1vw;
   }
 }

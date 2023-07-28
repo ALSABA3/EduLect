@@ -4,22 +4,13 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <nav
-      class="navbar fixed-top navbar-expand-lgnavbar navbar-expand-lg navbar-dark"
+      class="navbar fixed-top navbar-expand-lg navbar-dark"
       aria-label="navbar"
     >
       <div class="container">
-        <div className="flex-grow-1">
+        <div className="col d-flex align-items-center">
           <a class="navbar-brand" href="#coming-soon">
-            {/* <img
-              className="nav-logo me-2"
-              src="/black-logo.png"
-              alt="Logo"
-              width="42"
-              height="38"
-            /> */}
-            <p className="d-inline" style={{ fontFamily: "ATOMED" }}>
-              EDULECT
-            </p>
+            <p style={{ fontFamily: "ATOMED" }}>EDULECT</p>
           </a>
         </div>
         <button
@@ -35,7 +26,7 @@ const NavBar = () => {
         </button>
 
         <div class="collapse navbar-collapse" id="navbarsExample07">
-          <ul class="navbar-nav me-auto flex-grow-1 align-items-center justify-content-end">
+          <ul class="navbar-nav me-auto col align-items-center justify-content-end">
             <li class="nav-item m-1">
               <a class="nav-link fs-5" aria-current="page" href="#coming-soon">
                 Courses

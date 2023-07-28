@@ -1,3 +1,25 @@
-html body {
+@font-face {
+  font-family: "Delcom";
+  src: url("./fonts/Delcom.ttf") format("ttf");
+}
+@font-face {
   font-family: "seguibl";
+  src: url("./fonts/seguibl.ttf") format("ttf");
+}
+@font-face {
+  font-family: "DAMENTIONDEMOREGULAR";
+  src: url("./fonts/DamentionDemoRegular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "ATOMED";
+  src: url("./fonts/Atomed.ttf") format("ttf");
+}
+@font-face {
+  font-family: "LibreFranklin-ExtraLightItalic";
+  src: url("./fonts/LibreFranklin-ExtraLightItalic.ttf") format("ttf");
+}
+
+html body {
+  font-family: "LibreFranklin-ExtraLightItalic";
 }
