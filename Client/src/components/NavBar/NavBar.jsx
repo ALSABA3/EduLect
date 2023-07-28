@@ -17,10 +17,7 @@ const NavBar = () => {
               width="42"
               height="38"
             /> */}
-            <p
-              className="d-inline"
-              style={{ fontFamily: "ATOMED", fontSize: "1.667vw" }}
-            >
+            <p className="d-inline" style={{ fontFamily: "ATOMED" }}>
               EDULECT
             </p>
           </a>

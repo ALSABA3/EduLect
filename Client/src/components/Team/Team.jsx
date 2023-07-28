@@ -40,10 +40,10 @@ const products = [
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="product-card">
+    <div className="product-card d-flex flex-wrap flex-column align-items-center justify-content-center">
       <img src={product.image} alt={product.name} className="mb-3" />
-      <h3>{product.name}</h3>
-      <p>{product.description}</p>
+      <h3 className="text-center">{product.name}</h3>
+      <p className="text-center">{product.description}</p>
     </div>
   );
 };

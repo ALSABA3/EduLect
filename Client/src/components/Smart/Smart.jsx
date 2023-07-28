@@ -13,7 +13,7 @@ const Smart = () => {
             <div class="col-lg-6">
               <div className="d-flex flex-column align-items-center justify-content-center p-5">
                 <h1 class="smart-title display-5 fw-bold lh-1 my-2">
-                  Study smarter
+                  Study <span style={{ color: "#8F75E6" }}>smarter</span>
                 </h1>
                 <p class="smart-content lead my-2">
                   Enjoy our many features such as quizzes, assignments or

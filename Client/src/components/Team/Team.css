@@ -25,7 +25,6 @@
   width: 100%;
   border-radius: 50%;
   max-height: 10.417vw;
-  /* object-fit: cover; */
 }
 
 /* Style the product card title and description */
@@ -36,4 +35,61 @@
 
 .product-card p {
   color: #ffffff80;
+}
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+  #team {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .swappable-product-cards {
+    max-width: 90vw;
+  }
+
+  .product-card {
+    padding: 15vw;
+    border-radius: 2vw;
+    margin: 2vw;
+  }
+
+  .product-card img {
+    max-height: 30vw;
+    width: 30vw;
+  }
+
+  .product-card h3 {
+    font-size: 8.5vw;
+    margin-top: 1vw;
+  }
+
+  .product-card p {
+    font-size: 4.5vw;
+  }
+}
+
+/* Tablet Devices (max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .swappable-product-cards {
+    max-width: 90%;
+  }
+
+  .product-card {
+    flex: 0 0 33.33%;
+  }
+
+  .product-card img {
+    width: 70%;
+    max-height: 15vw;
+  }
+
+  .product-card h3 {
+    font-size: 2vw;
+    margin-top: 1.5vw;
+  }
+
+  .product-card p {
+    font-size: 1.8vw;
+  }
 }

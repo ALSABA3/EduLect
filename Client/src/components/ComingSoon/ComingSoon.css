@@ -1,13 +1,11 @@
 #coming-soon {
   height: 100vh;
-  /* background-color: #291669; */
   background-image: url(/coming-soon.png);
-  /* background-attachment: fixed; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-/* 007bff */
+
 .coming-soon-title {
   text-align: center;
   margin: 25px;
@@ -15,6 +13,7 @@
   font-size: 2rem;
   color: #cb6ce6;
 }
+
 .countdown-container {
   display: flex;
   justify-content: center;
@@ -25,7 +24,6 @@
   text-align: center;
   margin: 0 10px;
   transition: transform 0.2s ease-in-out;
-  /* cursor: pointer; */
 }
 
 .countdown-box {
@@ -38,7 +36,6 @@
   color: #8f75e6;
   border: 0.25rem solid rgba(255, 255, 255, 1);
   border-radius: 8px;
-  /* background: linear-gradient(to bottom, rgb(33, 16, 88), rgb(21, 13, 45)); */
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -63,4 +60,55 @@
   text-align: center;
   margin: 25px;
   color: #fff;
+}
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+  .coming-soon-title {
+    font-size: 4vw;
+  }
+
+  .coming-soon-text {
+    font-size: 4.5vw;
+    margin: 15px;
+    padding: 1rem;
+  }
+
+  .countdown-box {
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+  }
+
+  .countdown-value {
+    margin-bottom: 3px;
+  }
+
+  .countdown-label {
+    font-size: 10px;
+  }
+}
+
+/* Tablets and Larger Devices */
+@media (min-width: 768px) {
+  .coming-soon-title {
+    font-size: 1.667vw;
+  }
+
+  .coming-soon-text {
+    font-size: 1.458vw;
+    margin: 25px;
+  }
+}
+
+/* Larger Screens */
+@media (min-width: 1200px) {
+  .coming-soon-title {
+    font-size: 1.25vw;
+  }
+
+  .coming-soon-text {
+    font-size: 1vw;
+    margin: 25px;
+  }
 }

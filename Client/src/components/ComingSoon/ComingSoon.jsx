@@ -93,7 +93,6 @@ const ComingSoon = ({ targetDate }) => {
             </div>
           </div>
         </div>
-        <img src="/z.gif" alt="gif" className="coming-gif" />
       </div>
     </section>
   );

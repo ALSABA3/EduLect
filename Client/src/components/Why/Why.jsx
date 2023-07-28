@@ -8,14 +8,14 @@ const Why = () => {
         <div class="row flex-lg-row align-items-center g-5 py-5">
           <div className="d-flex flex-column flex-lg-row align-items-center justify-content-center p-5">
             <div class="col-10 col-sm-8 col-lg-6 d-flex justify-content-center">
-              <img src="/z.png" className="study-img" />
+              <img src="/zzz.png" className="why-img" />
             </div>
             <div class="col-lg-6">
               <div className="d-flex flex-column align-items-center justify-content-center p-5">
                 <h1 class="why-title display-5 fw-bold lh-1 my-2">
                   <span style={{ color: "#8F75E6" }}>WHY</span> US ?
                 </h1>
-                <ul class="why-list my-2">
+                <ul class="why-list my-4">
                   <li>
                     <p class="why-content lead my-2">
                       The first platform in turkiye to explain university majors

@@ -1,8 +1,6 @@
 #study {
   height: 100vh;
-  /* background-color: #291669; */
   background-image: url(/study.png);
-  /* background-attachment: fixed; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,22 +11,47 @@
   color: white;
   text-align: center;
 }
+
 .study-title {
   font-family: "LibreFranklin-ExtraLightItalic";
-  font-size: 3.117vw;
+  font-size: 2.117vw;
 }
+
 .study-content {
   font-family: "LibreFranklin-ExtraLightItalic";
+  font-size: 1.5rem;
 }
-.my-border {
-  /* border: 1rem solid rgba(0, 0, 0, 0.5); */
-  border-radius: 0.26vw;
-  background-color: rgba(0, 0, 0, 0.8);
-}
+
 .study-img {
-  width: 70%;
+  width: 100%;
 }
+
 .study-btn {
   background-color: #8f75e6;
   border-color: #8f75e6;
+}
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+  .study-title {
+    font-size: 6vw;
+  }
+
+  .study-content {
+    font-size: 4.5vw;
+  }
+
+  .study-img {
+    width: 100%;
+  }
+
+  /* Adjust height and padding for better spacing on smaller screens */
+  #study {
+    min-height: auto;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .study-btn {
+    padding: 0.25rem;
+  }
 }

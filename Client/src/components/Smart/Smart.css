@@ -1,8 +1,6 @@
 #Smart {
   height: 100vh;
-  /* background-color: #291669; */
   background-image: url(/smart.png);
-  /* background-attachment: fixed; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,18 +11,38 @@
   color: white;
   text-align: center;
 }
+
 .smart-title {
   font-family: "LibreFranklin-ExtraLightItalic";
   font-size: 3.117vw;
 }
+
 .smart-content {
   font-family: "LibreFranklin-ExtraLightItalic";
+  font-size: 1.5rem;
 }
-.my-border {
-  /* border: 1rem solid rgba(0, 0, 0, 0.5); */
-  border-radius: 0.26vw;
-  background-color: rgba(0, 0, 0, 0.8);
-}
+
 .smart-img {
-  width: 70%;
+  width: 100%;
+}
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+  .smart-title {
+    font-size: 6vw;
+  }
+
+  .smart-content {
+    font-size: 4.5vw;
+  }
+
+  .smart-img {
+    width: 90%;
+  }
+
+  /* Adjust height and padding for better spacing on smaller screens */
+  #Smart {
+    height: auto;
+    padding-bottom: 20px;
+  }
 }

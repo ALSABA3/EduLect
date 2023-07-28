@@ -1,8 +1,8 @@
 #why {
   height: 100vh;
-  /* background-color: #291669; */
+
   background-image: url(/why.png);
-  /* background-attachment: fixed; */
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,10 +18,31 @@
 }
 .why-content {
   font-family: "LibreFranklin-ExtraLightItalic";
+  font-size: 1.5rem;
 }
 .why-img {
-  width: 70%;
+  width: 100%;
 }
 li::marker {
   color: #ffffff;
+}
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+  #why {
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .why-title {
+    font-size: 6vw;
+  }
+
+  .why-content {
+    font-size: 4.5vw;
+  }
+
+  .why-img {
+    width: 80%;
+  }
 }

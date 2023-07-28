@@ -1,6 +1,5 @@
 #landing {
   height: 100vh;
-  /* background-color: #0f1217; */
   background-image: url(/landing.png);
   background-attachment: fixed;
   background-size: cover;
@@ -13,33 +12,76 @@
   color: white;
   text-align: center;
 }
+
+/* Mobile Devices */
 .about-title {
-  font-family: "LibreFranklin-ExtraLightItalic";
-  font-size: 2.083vw;
+  font-size: 5vw;
 }
+
 .about-content {
-  font-family: "LibreFranklin-ExtraLightItalic";
-  font-size: 1.458vw;
+  font-size: 4.5vw;
 }
-.my-border {
-  /* border: 1rem solid rgba(0, 0, 0, 0.5); */
-  border-radius: 4.167vw;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 8.333vw;
-}
+
 .laning-img {
-  width: 36.458vw;
-  /* height: 38.78975950349108vh; */
+  width: 25vw;
 }
+
+.my-border {
+  padding: 8vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10vw;
+}
+
 .breathing-div {
   animation: breathe 4s infinite ease-in-out;
 }
+
 @keyframes breathe {
   0%,
   100% {
-    transform: scale(1); /* Initial and final scale: 1 (normal size) */
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.2); /* Scaled up to 120% at 50% of the animation */
+    transform: scale(1.2);
+  }
+}
+
+/* Tablets and Larger Devices */
+@media (min-width: 768px) {
+  .about-title {
+    font-size: 2.5vw;
+  }
+
+  .about-content {
+    font-size: 2.25vw;
+  }
+
+  .laning-img {
+    width: 25vw;
+  }
+
+  .my-border {
+    padding: 3vw;
+    border-radius: 2vw;
+  }
+}
+
+/* Desktop Screens and Larger */
+@media (min-width: 1200px) {
+  .about-title {
+    font-size: 2vw;
+  }
+
+  .about-content {
+    font-size: 1.4vw;
+  }
+
+  .laning-img {
+    width: 20vw;
+  }
+
+  .my-border {
+    padding: 1.5vw;
+    border-radius: 1vw;
   }
 }
