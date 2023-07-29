@@ -10,7 +10,7 @@ const NavBar = () => {
       <div class="container">
         <div className="col d-flex align-items-center">
           <a class="navbar-brand" href="#coming-soon">
-            <p style={{ fontFamily: "ATOMED" }}>EDULECT</p>
+            <p style={{ fontFamily: "DAMENTIONDEMOREGULAR" }}>EDULECT</p>
           </a>
         </div>
         <button

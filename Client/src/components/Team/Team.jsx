@@ -53,12 +53,12 @@ const products = [
     description: "...",
     image: "/8.jpg",
   },
-  {
-    id: 9,
-    name: "someone",
-    description: "...",
-    image: "/9.jpg",
-  },
+  // {
+  //   id: 9,
+  //   name: "someone",
+  //   description: "...",
+  //   image: "/9.jpg",
+  // },
   {
     id: 10,
     name: "someone",
@@ -71,7 +71,11 @@ const products = [
 const ProductCard = ({ product }) => {
   return (
     <div className="product-card d-flex flex-wrap flex-column align-items-center justify-content-center">
-      <img src={product.image} alt={product.name} className="mb-3" />
+      <img
+        src={product.image}
+        alt={product.name}
+        className="center-cropped mb-3"
+      />
       <h3 className="text-center">{product.name}</h3>
       <p className="text-center">{product.description}</p>
     </div>
@@ -91,7 +95,7 @@ const Team = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -110,8 +114,8 @@ const Team = () => {
       <div className="swappable-product-cards container h-100 ">
         <div className="d-flex flex-column h-100 align-content-center justify-content-center">
           <h2
-            className="coming-soon-title fw-bold"
-            style={{ fontFamily: "Delcom", color: "white" }}
+            className="team-title fw-bold text-center my-4"
+            style={{ fontFamily: "DAMENTIONDEMOREGULAR", color: "white" }}
           >
             Our Team
           </h2>

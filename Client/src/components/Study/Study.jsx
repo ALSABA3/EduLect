@@ -10,7 +10,7 @@ const Study = () => {
             <img src="/z.png" className="study-img" />
           </div>
           <div class="d-flex flex-column align-items-center justify-content-center px-5">
-            <h1 class="study-title display-5 fw-bold lh-1 ">
+            <h1 class="study-title display-5 fw-bold lh-1 my-3">
               Study <span style={{ color: "#8F75E6" }}>24/7</span> with us
             </h1>
             <p class="study-content lead">
@@ -18,7 +18,7 @@ const Study = () => {
               students. Distinguish yourself with us
             </p>
             <button
-              class="study-btn btn btn-light btn-lg "
+              class="study-btn btn btn-light btn-lg mt-4"
               type="button"
               onClick={() => {
                 location.href = "#coming-soon";

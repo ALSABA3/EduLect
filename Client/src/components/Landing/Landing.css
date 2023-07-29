@@ -44,6 +44,7 @@
 
 /* Mobile Devices */
 .about-title {
+  font-family: "DAMENTIONDEMOREGULAR";
   font-size: 5vw;
 }
 
@@ -52,7 +53,7 @@
 }
 
 .landing-img {
-  width: 25vw;
+  width: 50vw;
 }
 
 /* Tablets and Larger Devices */
@@ -66,7 +67,7 @@
   }
 
   .landing-img {
-    width: 20vw;
+    width: 30vw;
   }
 }
 

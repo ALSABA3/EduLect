@@ -10,7 +10,7 @@ const Smart = () => {
             <img src="/zz.png" className="smart-img" />
           </div>
           <div class="d-flex flex-column align-items-center justify-content-center px-5">
-            <h1 class="smart-title display-5 fw-bold lh-1 my-2">
+            <h1 class="smart-title display-5 fw-bold lh-1 my-3">
               Study <span style={{ color: "#8F75E6" }}>smarter</span>
             </h1>
             <p class="smart-content lead my-2">

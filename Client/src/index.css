@@ -20,5 +20,5 @@
   src: url("./fonts/LibreFranklin-ExtraLightItalic.ttf") format("truetype");
 }
 html body {
-  font-family: "LibreFranklin-ExtraLightItalic";
+  font-family: sans-serif;
 }
