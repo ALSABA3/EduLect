@@ -86,7 +86,7 @@
 /* Tablets and Larger Devices */
 @media (min-width: 768px) {
   .coming-soon-title {
-    font-size: 1.667vw;
+    font-size: 2.5rem;
   }
 
   .coming-soon-text {
@@ -98,7 +98,7 @@
 /* Larger Screens */
 @media (min-width: 1200px) {
   .coming-soon-title {
-    font-size: 1.25vw;
+    font-size: 3rem;
   }
 
   .coming-soon-text {
