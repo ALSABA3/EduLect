@@ -1,25 +1,27 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import NavBar from "./components/NavBar/NavBar";
-import Landing from "./components/Landing/Landing";
 import Footer from "./components/Footer/Footer";
-import ComingSoon from "./components/ComingSoon/ComingSoon";
-import Study from "./components/Study/Study";
-import Team from "./components/Team/Team";
-import Smart from "./components/Smart/Smart";
-import Why from "./components/Why/Why";
+
+import Home from "./pages/1.Home/Home";
+import Courses from "./pages/2.Courses/Courses";
+import SignUp from "./pages/3.Signup/Signup";
+import Signin from "./pages/4.Signin/Signin";
 
 function App() {
-  const targetDate = "2023-09-16T00:00:00";
   return (
     <>
-      <NavBar />
-      <Landing />
-      <ComingSoon targetDate={targetDate} />
-      <Study />
-      <Smart />
-      <Team />
-      <Why />
-      <Footer />
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/Courses" element={<Courses />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/Signin" element={<Signin />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }
