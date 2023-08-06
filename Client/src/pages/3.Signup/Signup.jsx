@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FacebookButton from "../../components/FacebookButton";
+import "./Signup.css";
+// import FacebookButton from "../../components/FacebookButton";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -33,60 +34,93 @@ const Signup = () => {
     }
   };
 
-  const handleFacebookLoginSuccess = (response) => {
-    console.log("Facebook login success!", response);
-    // Handle the successful login (e.g., send the data to your backend for authentication)
-  };
+  // const handleFacebookLoginSuccess = (response) => {
+  //   console.log("Facebook login success!", response);
+  //   // Handle the successful login (e.g., send the data to your backend for authentication)
+  // };
 
-  const handleFacebookLoginFailure = () => {
-    console.log("Facebook login failed.");
-    // Handle the login failure if needed
-  };
+  // const handleFacebookLoginFailure = () => {
+  //   console.log("Facebook login failed.");
+  //   // Handle the login failure if needed
+  // };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="d-flex flex-column align-items-center justify-content-center"
-      style={{ height: "100vh" }}
-    >
-      <input
-        type="text"
-        name="user_fname"
-        value={formData.user_fname}
-        onChange={handleChange}
-        placeholder="First Name"
-        required
-      />
-      <input
-        type="text"
-        name="user_lname"
-        value={formData.user_lname}
-        onChange={handleChange}
-        placeholder="Last Name"
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        placeholder="Email"
-        required
-      />
-      <input
-        type="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
-        placeholder="Password"
-        required
-      />
-      <button type="submit">Sign Up</button>
-      <FacebookButton
+    <>
+      <div
+        className="d-flex justify-content-center align-items-center"
+        style={{ height: "100vh" }}
+      >
+        <div className="form-signin w-100 m-auto">
+          <form onSubmit={handleSubmit}>
+            <img
+              src="/black-bg-logo.png"
+              alt="logo"
+              width="112"
+              height="100"
+              className="mb-4"
+            />
+            <h1 className="h3 mb-3 fw-normal">Please Sign Up</h1>
+
+            <div className="form-floating">
+              <input
+                type="text"
+                name="user_fname"
+                value={formData.user_fname}
+                onChange={handleChange}
+                placeholder="First Name"
+                required
+                className="form-control"
+              />
+              <label htmlFor="user_fname">First Name</label>
+            </div>
+            <div className="form-floating">
+              <input
+                type="text"
+                name="user_lname"
+                value={formData.user_lname}
+                onChange={handleChange}
+                placeholder="Last Name"
+                required
+                className="form-control"
+              />
+              <label htmlFor="user_lname">Last Name</label>
+            </div>
+            <div className="form-floating">
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email"
+                required
+                className="form-control"
+              />
+              <label htmlFor="uemail">Email Address</label>
+            </div>
+            <div className="form-floating">
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Password"
+                required
+                className="form-control"
+              />
+              <label htmlFor="password">Password</label>
+            </div>
+            <button className="btn btn-primary w-100 py-2" type="submit">
+              Sign Up
+            </button>
+
+            {/* <FacebookButton
         onLoginSuccess={handleFacebookLoginSuccess}
         onLoginFailure={handleFacebookLoginFailure}
-      />
-    </form>
+      /> */}
+          </form>
+        </div>
+      </div>
+    </>
   );
 };
 
