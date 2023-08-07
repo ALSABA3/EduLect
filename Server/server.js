@@ -32,6 +32,18 @@ app.get("/api/courses", async (req, res) => {
   }
 });
 
+app.get("/api/courses/:department", async (req, res) => {
+  try {
+    const department = req.params.department;
+    const sql = "SELECT course_name FROM courses WHERE department = ?";
+    const [rows, fields] = await pool.query(sql, [department]);
+    res.json(rows);
+  } catch (err) {
+    console.error("Error fetching courses:", err);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 app.post("/api/signup", async (req, res) => {
   try {
     const { user_fname, user_lname, email, password } = req.body;
