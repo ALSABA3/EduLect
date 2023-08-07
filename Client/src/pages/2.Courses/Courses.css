@@ -5,6 +5,14 @@
   background-attachment: fixed;
   background-position: center;
 }
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
 .department-cards {
   display: flex;
   flex-wrap: wrap;
@@ -25,12 +33,12 @@ a {
   box-sizing: border-box;
 }
 
-.department-card h2 {
+.department-card > div > h2 {
   color: #fafbff;
   font-size: 2rem;
 }
 
-.department-card img {
+.department-card > div > img {
   width: 80%;
 }
 
