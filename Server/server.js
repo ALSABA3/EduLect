@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
+const config = require("./config");
 
 const app = express();
 app.use(express.json());
@@ -15,10 +15,10 @@ const port = 5000;
 // const secretKey = process.env.JWT_SECRET_KEY;
 
 const pool = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "boda15king",
-  database: "edulect",
+  host: config.host,
+  user: config.user,
+  password: config.password,
+  database: config.database,
 });
 
 app.get("/api/courses", async (req, res) => {
@@ -71,7 +71,8 @@ app.post("/api/signin", (req, res) => {
       res.send({ err: err });
     }
 
-    if (result.length > 0) {
+    if (result.length != 0) {
+      console.log(result);
       bcrypt.compare(password, result[0].password, (error, response) => {
         if (response) {
           res.send(result);
