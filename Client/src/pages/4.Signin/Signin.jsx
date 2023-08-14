@@ -20,7 +20,7 @@ const Signin = () => {
         email,
         password,
       });
-      console.log("Response from server:", response.data);
+      console.log(response.data);
     } catch (error) {
       console.error("Error logging in:", error);
     }

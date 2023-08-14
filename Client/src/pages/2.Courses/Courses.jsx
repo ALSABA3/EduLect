@@ -14,9 +14,7 @@ const Courses = () => {
   }, []);
 
   const fetchCoursesForDepartment = (departmentName) => {
-    fetch(
-      `http://localhost:5000/api/courses/${encodeURIComponent(departmentName)}`
-    )
+    fetch(`http://localhost:5000/api/${encodeURIComponent(departmentName)}`)
       .then((response) => response.json())
       .then((data) => setDepartmentCourses(data))
       .catch((error) => console.error("Error fetching courses:", error));
@@ -80,7 +78,6 @@ const Courses = () => {
                         src="/black-bg-logo.png"
                         alt={`Logo for ${department.department}`}
                       />
-                      {/* You can add more information or styling here */}
                     </div>
                   </a>
                 ))}
