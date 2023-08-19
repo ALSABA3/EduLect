@@ -7,14 +7,16 @@ const Courses = () => {
   const [departmentCourses, setDepartmentCourses] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/courses")
+    fetch("http://localhost:5000/api/departments")
       .then((response) => response.json())
       .then((data) => setDepartments(data))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  const fetchCoursesForDepartment = (departmentName) => {
-    fetch(`http://localhost:5000/api/${encodeURIComponent(departmentName)}`)
+  const fetchCoursesForDepartment = (department) => {
+    fetch(
+      `http://localhost:5000/api/department/${department.department_id}/courses`
+    )
       .then((response) => response.json())
       .then((data) => setDepartmentCourses(data))
       .catch((error) => console.error("Error fetching courses:", error));
@@ -22,7 +24,7 @@ const Courses = () => {
 
   const handleDepartmentClick = (department) => {
     setSelectedDepartment(department);
-    fetchCoursesForDepartment(department.department);
+    fetchCoursesForDepartment(department);
   };
 
   const handleBackToDepartments = () => {
@@ -41,11 +43,15 @@ const Courses = () => {
             {selectedDepartment ? (
               <>
                 <h3 style={{ color: "white" }}>
-                  Courses From {selectedDepartment?.department}
+                  Courses From {selectedDepartment?.department_name}
                 </h3>
                 <div className="course-list">
                   {departmentCourses.map((course, index) => (
-                    <a key={index} className="department-card">
+                    <a
+                      key={index}
+                      className="department-card"
+                      href={"/departments/" + course.course_name}
+                    >
                       <div className="d-flex align-items-center flex-column">
                         <h2>{course.course_name}</h2>
                         <img
@@ -73,10 +79,10 @@ const Courses = () => {
                     onClick={() => handleDepartmentClick(department)}
                   >
                     <div className="d-flex align-items-center flex-column">
-                      <h2>{department.department}</h2>
+                      <h2>{department.department_name}</h2>
                       <img
                         src="/black-bg-logo.png"
-                        alt={`Logo for ${department.department}`}
+                        alt={`Logo for ${department.department_name}`}
                       />
                     </div>
                   </a>

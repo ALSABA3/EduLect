@@ -1,26 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import NavBar from "./components/NavBar/NavBar";
-import Footer from "./components/Footer/Footer";
+// import NavBar from "./components/NavBar/NavBar";
+import NavbarLoggedIn from "./components/NavBar/NavbarLoggedIn";
+import NavbarLoggedOut from "./components/NavBar/NavbarLoggedOut";
 
 import Home from "./pages/1.Home/Home";
 import Courses from "./pages/2.Courses/Courses";
 import SignUp from "./pages/3.Signup/Signup";
 import Signin from "./pages/4.Signin/Signin";
+import Course from "./pages/2.Courses/Course";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [profilePhoto, setProfilePhoto] = useState("");
   return (
     <>
       <Router>
-        <NavBar />
+        {isLoggedIn ? (
+          <NavbarLoggedIn profilePhoto={profilePhoto} />
+        ) : (
+          <NavbarLoggedOut />
+        )}
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/Courses" element={<Courses />} />
+          <Route path="/departments" element={<Courses />} />
           <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/Signin" element={<Signin />} />
+          <Route
+            path="/Signin"
+            element={
+              <Signin
+                setIsLoggedIn={setIsLoggedIn}
+                setProfilePhoto={setProfilePhoto}
+              />
+            }
+          />
+          <Route path="/departments/:course_name" element={<Course />} />
         </Routes>
-        <Footer />
       </Router>
     </>
   );

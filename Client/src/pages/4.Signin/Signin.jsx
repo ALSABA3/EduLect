@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const Signin = () => {
+const Signin = ({ setIsLoggedIn, setProfilePhoto }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -16,11 +17,39 @@ const Signin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/signin", {
+      const response = await axios.post("http://localhost:5000/api/login", {
         email,
         password,
       });
-      console.log(response.data);
+      if (response.data.message === "Signin successful") {
+        setIsLoggedIn(true);
+        setProfilePhoto(response.data.user[0].profile_photo);
+      }
+    } catch (error) {
+      console.error("Error logging in:", error);
+    }
+  };
+
+  const handleGoogleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:5000/api/auth/google", {
+        mode: "no-cors",
+      });
+      console.log(response.data.message);
+      setProfilePhoto(response.data.user[0].profile_photo);
+      setIsLoggedIn(true);
+    } catch (error) {
+      console.error("Error logging in:", error);
+    }
+  };
+
+  const handleFacebookLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.get("http://localhost:5000/api/facebook");
+      console.log(response.data.message);
+      setIsLoggedIn(true);
     } catch (error) {
       console.error("Error logging in:", error);
     }
@@ -68,15 +97,19 @@ const Signin = () => {
               <label htmlFor="password">Password</label>
             </div>
             <button className="btn btn-primary w-100 py-2" type="submit">
-              Sign In
+              Login
             </button>
+            <div className="d-flex">
+              <a className="col-6" role="button" onClick={handleGoogleLogin}>
+                Continue with Google
+              </a>
+              <a className="col-6" role="button" onClick={handleFacebookLogin}>
+                Continue with Facebook
+              </a>
+            </div>
             <p>
               don't have an account? <a href="/signup">register</a>
             </p>
-            {/* <FacebookButton
-    onLoginSuccess={handleFacebookLoginSuccess}
-    onLoginFailure={handleFacebookLoginFailure}
-  /> */}
           </form>
         </div>
       </div>

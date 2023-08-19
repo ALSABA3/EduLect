@@ -6,7 +6,7 @@ import Study from "./Study/Study";
 import Smart from "./Smart/Smart";
 import Team from "./Team/Team";
 import Why from "./Why/Why";
-// import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
   const targetDate = "2023-09-16T00:00:00";
@@ -19,6 +19,7 @@ const Home = () => {
         <Smart />
         <Team />
         <Why />
+        <Footer />
       </>
     </>
   );

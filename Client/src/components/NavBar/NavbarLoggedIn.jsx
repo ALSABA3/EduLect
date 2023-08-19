@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavbarLoggedIn = ({ profilePhoto }) => {
   return (
     <nav
       className="navbar fixed-top navbar-expand-lg navbar-dark"
@@ -49,22 +49,6 @@ const NavBar = () => {
                 />
               </a>
             </li>
-            <li className="nav-item m-1">
-              <a
-                type="button"
-                className="enter btn btn-outline-light"
-                href="/signin"
-              >
-                <span>join</span>
-                <img
-                  src="/enter.png"
-                  alt="enter"
-                  width="24"
-                  height="24"
-                  className="ms-2"
-                />
-              </a>
-            </li>
             <li className="nav-item m-1 dropdown d-flex flex-column flex-wrap align-content-center justify-content-center">
               <a
                 className="nav-link dropdown-toggle text-center"
@@ -96,6 +80,36 @@ const NavBar = () => {
                 </li>
               </ul>
             </li>
+            <li className="nav-item m-1 dropdown d-flex flex-column flex-wrap align-content-center justify-content-center">
+              <a
+                className="nav-link dropdown-toggle text-center"
+                href="#coming-soon"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src={profilePhoto}
+                  style={{ width: "30px", height: "30px" }}
+                />
+              </a>
+              <ul className="dropdown-menu text-center">
+                <li>
+                  <a className="dropdown-item" href="#coming-soon">
+                    Dashboard
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#coming-soon">
+                    Settings
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#coming-soon">
+                    Log Out
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -103,4 +117,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavbarLoggedIn;

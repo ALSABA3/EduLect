@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavbarLoggedOut = () => {
   return (
     <nav
       className="navbar fixed-top navbar-expand-lg navbar-dark"
@@ -103,4 +103,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default NavbarLoggedOut;
