@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from "../../components/NavBar/NavBar";
 import Landing from "./Landing/Landing";
 import ComingSoon from "./ComingSoon/ComingSoon";
 import Study from "./Study/Study";

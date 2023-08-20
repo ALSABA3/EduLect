@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const Signin = ({ setIsLoggedIn, setProfilePhoto }) => {
+const Signin = ({ login }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -22,38 +22,33 @@ const Signin = ({ setIsLoggedIn, setProfilePhoto }) => {
         password,
       });
       if (response.data.message === "Signin successful") {
-        setIsLoggedIn(true);
-        setProfilePhoto(response.data.user[0].profile_photo);
+        login();
       }
     } catch (error) {
       console.error("Error logging in:", error);
     }
   };
 
-  const handleGoogleLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("http://localhost:5000/api/auth/google", {
-        mode: "no-cors",
-      });
-      console.log(response.data.message);
-      setProfilePhoto(response.data.user[0].profile_photo);
-      setIsLoggedIn(true);
-    } catch (error) {
-      console.error("Error logging in:", error);
-    }
-  };
+  // const handleGoogleLogin = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await axios.get("http://localhost:5000/api/auth/google");
+  //     console.log(response.data.message);
+  //     login();
+  //   } catch (error) {
+  //     console.error("Error logging in:", error);
+  //   }
+  // };
 
-  const handleFacebookLogin = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.get("http://localhost:5000/api/facebook");
-      console.log(response.data.message);
-      setIsLoggedIn(true);
-    } catch (error) {
-      console.error("Error logging in:", error);
-    }
-  };
+  // const handleFacebookLogin = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await axios.get("http://localhost:5000/api/facebook");
+  //     console.log(response.data.message);
+  //   } catch (error) {
+  //     console.error("Error logging in:", error);
+  //   }
+  // };
 
   return (
     <>
@@ -100,10 +95,18 @@ const Signin = ({ setIsLoggedIn, setProfilePhoto }) => {
               Login
             </button>
             <div className="d-flex">
-              <a className="col-6" role="button" onClick={handleGoogleLogin}>
+              <a
+                className="col-6"
+                role="button"
+                href="http://localhost:5000/api/auth/google"
+              >
                 Continue with Google
               </a>
-              <a className="col-6" role="button" onClick={handleFacebookLogin}>
+              <a
+                className="col-6"
+                role="button"
+                href="http://localhost:5000/api/facebook"
+              >
                 Continue with Facebook
               </a>
             </div>

@@ -1,7 +1,12 @@
 import React from "react";
 import "./NavBar.css";
 
-const NavbarLoggedIn = ({ profilePhoto }) => {
+const NavbarLoggedIn = ({ logout }) => {
+  const handelLogout = (e) => {
+    e.preventDefault();
+    logout();
+  };
+
   return (
     <nav
       className="navbar fixed-top navbar-expand-lg navbar-dark"
@@ -87,10 +92,7 @@ const NavbarLoggedIn = ({ profilePhoto }) => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                <img
-                  src={profilePhoto}
-                  style={{ width: "30px", height: "30px" }}
-                />
+                <img src="/8.png" style={{ width: "30px", height: "30px" }} />
               </a>
               <ul className="dropdown-menu text-center">
                 <li>
@@ -104,7 +106,7 @@ const NavbarLoggedIn = ({ profilePhoto }) => {
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#coming-soon">
+                  <a className="dropdown-item" onClick={handelLogout}>
                     Log Out
                   </a>
                 </li>
