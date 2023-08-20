@@ -9,18 +9,10 @@ const FacebookStrategy = require("passport-facebook");
 const pool = require("./config");
 const bcrypt = require("bcrypt");
 
-// Load routes
-const LoginRoutes = require("./routes/login");
-const corusesRoutes = require("./routes/courses");
-const departmentRoutes = require("./routes/department");
-const registerRoutes = require("./routes/register");
-
-const frontendOrigin = "http://localhost:5173";
-
 const app = express();
 app.use(express.json());
 app.use(bodyParser.json());
-app.use(cors({ origin: frontendOrigin }));
+app.use(cors());
 const port = 5000;
 
 const secretKey = process.env.SECRET_KEY;
@@ -28,13 +20,19 @@ const secretKey = process.env.SECRET_KEY;
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(
-  session({ secret: `${secretKey}`, resave: true, saveUninitialized: true })
+  session({ secret: `${secretKey}`, resave: false, saveUninitialized: false })
 );
 app.use(passport.initialize());
 app.use(passport.session());
 
 const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET;
 const FACEBOOK_APP_SECRET = process.env.FACEBOOK_APP_SECRET;
+
+// Load routes
+const LoginRoutes = require("./routes/login");
+const corusesRoutes = require("./routes/courses");
+const departmentRoutes = require("./routes/department");
+const registerRoutes = require("./routes/register");
 
 passport.use(
   new LocalStrategy(
@@ -79,7 +77,7 @@ passport.use(
       try {
         // Search for a user with the given Google ID
         const [rows] = await pool.query(
-          "SELECT * FROM users WHERE user_id = ?",
+          "SELECT * FROM users WHERE google_id = ?",
           [profile.id]
         );
         let user = rows[0];
@@ -87,7 +85,7 @@ passport.use(
         if (!user) {
           // If user not found, insert a new user
           const insertResult = await pool.query(
-            "INSERT INTO users (user_id, user_fname, user_lname, email, profile_photo) VALUES (?,?,?,?,?)",
+            "INSERT INTO users (google_id, user_fname, user_lname, email, profile_photo) VALUES (?,?,?,?,?)",
             [
               profile.id,
               profile.name.givenName,
@@ -97,7 +95,7 @@ passport.use(
             ]
           );
           const [rows] = await pool.query(
-            "SELECT * FROM users WHERE user_id = ?",
+            "SELECT * FROM users WHERE google_id = ?",
             [profile.id]
           );
           let user = rows[0];
@@ -115,11 +113,37 @@ passport.use(
     {
       clientID: process.env.FACEBOOK_APP_ID,
       clientSecret: FACEBOOK_APP_SECRET,
-      callbackURL: "http://localhost:5000/facebook/callback",
+      callbackURL: "http://localhost:5000/api/facebook/callback",
     },
-    (accessToken, refreshToken, profile, done) => {
-      // Replace this with your actual Facebook authentication logic
-      return done(null, profile);
+    async (accessToken, refreshToken, profile, done) => {
+      console.log(profile);
+      try {
+        // Search for a user with the given Google ID
+        const [rows] = await pool.query(
+          "SELECT * FROM users WHERE facebook_id = ?",
+          [profile.id]
+        );
+        let user = rows[0];
+
+        if (!user) {
+          const nameParts = profile.displayName.split(" ");
+          const lname = nameParts.pop();
+          const fname = nameParts.join(" ");
+
+          const insertResult = await pool.query(
+            "INSERT INTO users (facebook_id, user_fname, user_lname) VALUES (?,?,?)",
+            [profile.id, fname, lname]
+          );
+          const [rows] = await pool.query(
+            "SELECT * FROM users WHERE facebook_id = ?",
+            [profile.id]
+          );
+          let user = rows[0];
+        }
+        return done(null, user);
+      } catch (error) {
+        return done(error, false);
+      }
     }
   )
 );

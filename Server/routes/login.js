@@ -3,7 +3,6 @@ const passport = require("passport");
 const pool = require("../config");
 const bcrypt = require("bcrypt");
 const router = express.Router();
-const cors = require("cors");
 
 // Local authentication
 router.post("/login", async (req, res) => {
@@ -46,7 +45,7 @@ router.post("/login", async (req, res) => {
   }
 });
 
-// Google authentication
+//Google authentication
 router.get(
   "/auth/google",
   passport.authenticate("google", { scope: ["email", "profile"] })
@@ -55,7 +54,7 @@ router.get(
 router.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    successRedirect: "http://localhost:5000/",
+    successRedirect: "http://localhost:5173/",
     failureRedirect: "http://localhost:5173/signin",
   }),
   (req, res) => {
